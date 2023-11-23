@@ -1,0 +1,158 @@
+package diubus;
+import java.util.Scanner;
+public class Student{
+    public static void main(String[] args) {
+      Scanner input=new Scanner(System.in);
+      int id,mm,dd,yy,pass;
+      char F,T;
+      int x,p,c;
+      Student ob1=new Student();
+      
+        System.out.println("DIU ONLINE BUS TICKET");
+        System.out.println("ENTER YOUR ID : ");
+        id=input.nextInt();
+        System.out.println("Enter YOUR PASSWORD: ");
+        pass=input.nextInt();
+        ob1.yourid(id);
+        System.out.println("Date : dd/mm/yy ");
+        dd=input.nextInt();
+        mm=input.nextInt();
+        yy=input.nextInt();
+        System.out.println("Date :"+dd+"/"+mm+"/"+yy);
+        System.out.println("Enter your route: ");
+        F=input.next().charAt(0);
+        T=input.next().charAt(0);
+        ob1.yourroute(F,T);
+        System.out.println("Pay The Ticket Fees By 1card");
+        System.out.println("Enter Your 1card Payment Method");
+        System.out.println("1. Bkash   2. Nagad");
+        System.out.println("3. Rocket  4. Card");
+        x=input.nextInt();
+        ob1.payfees(x);
+        System.out.println("Enter Your OTP:");
+        p=input.nextInt();
+        System.out.println("Your OTP "+p+" is Matched");
+        System.out.println("Confirm Your Ticket");
+        System.out.println("1. YES   2. NO");
+        c=input.nextInt();
+        ob1.conformation(c);
+    }
+      
+  public void yourid(int id){
+    if(id==842){
+        System.out.println("Name : Farid  Deparment : SWE ");
+    }else if(id==843){
+        System.out.println("Name : Sudip  Deparment : SWE ");
+    }else if(id==844){
+        System.out.println("Name : Mukabbir  Deparment : SWE ");
+    }else if(id==845){
+        System.out.println("Name : Rifat  Deparment : SWE ");
+    }else if(id==846){
+        System.out.println("Name : Shahorier  Deparment : SWE ");
+    }else if(id==847){
+        System.out.println("Name : Rahat  Deparment : SWE ");
+    }else if(id==848){
+        System.out.println("Name : Emon  Deparment : SWE ");
+    }else if(id==849){
+        System.out.println("Name : Minhazul  Deparment : SWE ");
+    }else if(id==850){
+        System.out.println("Name : Roy  Deparment : SWE ");
+    }else if(id==851){
+        System.out.println("Name : Fahad  Deparment : SWE ");
+    }else if(id==852){
+        System.out.println("Name : Nirob  Deparment : SWE ");
+    }
+  }
+  public void yourroute(char F,char T){
+    if(F=='a'){
+        if(T=='m'){
+            System.out.println("Asulia To Mirpur : 20/-TK");
+        }
+        else if(T=='d'){
+            System.out.println("Asulia To Dhanmondi : 25/-TK");
+        }
+        else if(T=='u'){
+            System.out.println("Asulia TO Uttra : 20/-TK");
+        }
+        else if(T=='t'){
+            System.out.println("Asulia To Tonggi : 25/-Tk");
+        }
+    }
+    else if(F=='d'){
+        if(T=='a'){
+            System.out.println("Dhanmondi To Asulia : 25/-TK");
+        }
+    }
+    else if(F=='u'){
+        if(T=='a'){
+            System.out.println("Uttra To Asulia : 20/-TK");
+        }
+    }
+    else if(F=='m'){
+        if(T=='a'){
+            System.out.println("Mirpur To Asulia : 20/-TK");
+        }
+    }
+    else if(F=='t'){
+        if(T=='a'){
+            System.out.println("Tonggi To Asulia : 25/-TK");
+        }
+    }
+  }
+  public void payfees(int x){
+    Scanner input=new Scanner(System.in);
+    int t,s;
+    if(x==1){
+        System.out.println("You Choose Bkash");
+        System.out.println("Enter your Phone Number: ");
+        s=input.nextInt();
+        System.out.println("Enter Your Amount: ");
+        t=input.nextInt();
+        System.out.println("Your OTP...");
+        int i=96;
+        System.out.println(t+i+t);
+    }
+    else if(x==2){
+        System.out.println("You Choose Nagad");
+        System.out.println("Enter your Phone Number: ");
+        s=input.nextInt();
+        System.out.println("Enter Your Amount: ");
+        t=input.nextInt();
+        System.out.println("Your OTP...");
+        int i=14;
+        System.out.println(i+t+i);
+    }
+    else if(x==3){
+        System.out.println("You Choose Rocket");
+        System.out.println("Enter your Phone Number: ");
+        s=input.nextInt();
+        System.out.println("Enter Your Amount: ");
+        t=input.nextInt();
+        System.out.println("Your OTP...");
+        int i=961;
+        System.out.println(t+i);
+    }
+    else if(x==4){
+        System.out.println("You Choose Card");
+        System.out.println("Enter your Card Number: ");
+        s=input.nextInt();
+        System.out.println("Enter Your Amount: ");
+        t=input.nextInt();
+        System.out.println("Your OTP...");
+        int i=172;
+        System.out.println(t+i);
+    }
+  }
+  public void conformation(int c){
+    Scanner input=new Scanner(System.in);
+    if(c==1){
+        System.out.println("Congratulations");
+    }else{
+        System.out.println("Try Again!!!");
+        System.out.println("Enter Your Id: ");
+        Student ob2=new Student();
+        int id1=input.nextInt();
+        ob2.yourid(id1);
+    }
+  }
+}
